@@ -39,7 +39,8 @@ export class DevbookClient {
   private readonly timeoutMs: number;
 
   constructor(options: DevbookClientOptions = {}) {
-    this.baseUrl = (options.baseUrl || process.env.DEVBOOK_API_URL || "http://localhost:3000").replace(/\/+$/, "");
+    const rawUrl = options.baseUrl || process.env.DEVBOOK_API_URL || "http://localhost:3000";
+    this.baseUrl = rawUrl.replace(/\/+$/, "").replace(/\/api\/v1$/, "");
     this.apiKey = options.apiKey || process.env.DEVBOOK_API_KEY;
     this.timeoutMs = options.timeoutMs ?? 30000;
   }

@@ -12,9 +12,12 @@ describe("DevbookClient", () => {
     globalThis.fetch = originalFetch;
   });
 
-  it("configures base URL and strips trailing slashes", () => {
-    const client = new DevbookClient({ baseUrl: "http://127.0.0.1:4000///" });
-    expect(client.getBaseUrl()).toBe("http://127.0.0.1:4000");
+  it("configures base URL and strips trailing slashes and /api/v1 suffixes", () => {
+    const client1 = new DevbookClient({ baseUrl: "http://127.0.0.1:4000///" });
+    expect(client1.getBaseUrl()).toBe("http://127.0.0.1:4000");
+
+    const client2 = new DevbookClient({ baseUrl: "http://localhost:3000/api/v1/" });
+    expect(client2.getBaseUrl()).toBe("http://localhost:3000");
   });
 
   it("attaches Authorization header when apiKey is supplied", async () => {
