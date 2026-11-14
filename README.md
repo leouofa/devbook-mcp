@@ -1,4 +1,15 @@
-# Devbook MCP Server (`devbook-mcp`)
+<p align="center">
+  <img src="assets/logo.jpg" alt="Devbook MCP" width="600" />
+</p>
+
+# devbook-mcp
+
+[![Version](https://img.shields.io/badge/version-1.0.0-emerald.svg)](https://github.com/leouofa/devbook-mcp/releases/tag/v1.0.0)
+[![MCP Server](https://img.shields.io/badge/MCP-Server-purple.svg)](https://modelcontextprotocol.io)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![Devbook Engine](https://img.shields.io/badge/Devbook-Rails_8-D30001?logo=rubyonrails&logoColor=white)](https://github.com/leouofa/devbook)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Official TypeScript-based [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for [Devbook](https://github.com/leouofa/devbook), the distraction-free desktop prompt engineering workbench and studio.
 
@@ -133,7 +144,7 @@ Add to your `.cursor/mcp.json`:
 
 ## Available MCP Primitives
 
-### 🛠️ MCP Tools
+### MCP Tools
 
 | Tool | Description | Key Parameters |
 | :--- | :--- | :--- |
@@ -155,7 +166,7 @@ Add to your `.cursor/mcp.json`:
 | `devbook_render_markdown` | Render GFM into sanitized HTML | `text` |
 | `devbook_get_stats` | Inspect platform counts & metrics | *(none)* |
 
-### 📚 MCP Resources
+### MCP Resources
 
 | URI Pattern | MIME Type | Description |
 | :--- | :--- | :--- |
@@ -165,7 +176,7 @@ Add to your `.cursor/mcp.json`:
 | `devbook://prompts` | `application/json` | Index list of all prompt scratchpads and templates |
 | `devbook://prompts/{id}` | `text/markdown` | Full prompt Markdown body with metadata YAML frontmatter |
 
-### 💬 MCP Prompts (Prompt Templates)
+### MCP Prompts (Prompt Templates)
 
 - **`devbook_execute_prompt`**: Dynamically loads any Devbook prompt by ID and populates `{{variable}}` placeholders from a variables JSON dictionary.
 - **`devbook_author_prompt`**: Interactive guide that assists agents and users in authoring structured prompts with dynamic placeholders.
@@ -193,4 +204,4 @@ npm run build
 
 ## License
 
-This project is licensed under the MIT License.
+MIT © Leonid Medovyy
